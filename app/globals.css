@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --site-max: 75rem;
+    --site-gutter: clamp(1.25rem, 5vw, 3.5rem);
+  }
+
+  body {
+    @apply bg-page text-lg leading-relaxed text-ink antialiased md:text-xl;
+  }
+}
+
+@layer components {
+  .site-shell {
+    width: 100%;
+    padding-left: var(--site-gutter);
+    padding-right: var(--site-gutter);
+  }
+
+  .site-inner {
+    width: 100%;
+    max-width: var(--site-max);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
