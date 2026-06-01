@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import type { Project } from "@/data/projects";
-import { isProjectReady } from "@/data/projects";
+import { isProjectReady, previewOutlineClass } from "@/data/projects";
+import { ProjectLivePreview } from "@/components/ProjectLivePreview";
 
 type ProjectCardProps = {
   project: Project;
@@ -27,6 +27,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
     <article
       className={[
         "group relative aspect-video w-full cursor-pointer overflow-hidden focus-within:ring-2 focus-within:ring-ink focus-within:ring-offset-2",
+        previewOutlineClass,
         !ready && "opacity-60",
       ].join(" ")}
       style={{ backgroundColor: project.bgColor }}
@@ -36,14 +37,12 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
       onKeyDown={handleKeyDown}
       aria-label={`View ${project.title}`}
     >
-      <Image
-        src={project.thumbnail}
-        alt=""
-        fill
-        unoptimized={project.thumbnail.endsWith(".svg")}
-        className="object-cover transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transition-none"
-        sizes="(max-width: 640px) 100vw, 50vw"
-      />
+      <div className="absolute inset-0 transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transition-none">
+        <ProjectLivePreview
+          project={project}
+          sizes="(max-width: 640px) 100vw, 50vw"
+        />
+      </div>
 
       <div
         className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 via-black/10 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100 motion-reduce:transition-none"

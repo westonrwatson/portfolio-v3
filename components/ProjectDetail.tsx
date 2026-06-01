@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import type { Project } from "@/data/projects";
-import { isProjectReady } from "@/data/projects";
+import { isProjectReady, previewOutlineClass } from "@/data/projects";
+import { ProjectLivePreview } from "@/components/ProjectLivePreview";
 import { ProjectNav } from "@/components/ProjectNav";
 
 type ProjectDetailProps = {
@@ -20,30 +20,18 @@ export function ProjectDetail({ project, projects }: ProjectDetailProps) {
           href={project.liveUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative block aspect-video w-full overflow-hidden bg-stone-200 transition-opacity hover:opacity-95"
+          className={`relative block aspect-video w-full overflow-hidden bg-stone-200 transition-opacity hover:opacity-95 ${previewOutlineClass}`}
           style={{ backgroundColor: project.bgColor }}
           aria-label={`Open ${project.title} live site`}
         >
-          <iframe
-            src={project.liveUrl}
-            title={`Preview of ${project.title}`}
-            className="pointer-events-none absolute inset-0 h-full w-full border-0"
-          />
+          <ProjectLivePreview project={project} priority />
         </a>
       ) : (
         <div
-          className="relative aspect-video w-full overflow-hidden bg-stone-200"
+          className={`relative aspect-video w-full overflow-hidden bg-stone-200 ${previewOutlineClass}`}
           style={{ backgroundColor: project.bgColor }}
         >
-          <Image
-            src={project.thumbnail}
-            alt=""
-            fill
-            unoptimized={project.thumbnail.endsWith(".svg")}
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 75rem"
-            priority
-          />
+          <ProjectLivePreview project={project} priority />
         </div>
       )}
 
@@ -64,15 +52,6 @@ export function ProjectDetail({ project, projects }: ProjectDetailProps) {
             ))}
           </div>
         </div>
-
-        {ready ? (
-          <p className="text-muted">
-            Click the preview to open the live site. If the embed is blank, the
-            site may block embedding.
-          </p>
-        ) : null}
-
-        <ProjectNav projects={projects} currentSlug={project.slug} />
 
         {ready || project.repoUrl ? (
           <div className="flex flex-wrap gap-3">
@@ -98,6 +77,8 @@ export function ProjectDetail({ project, projects }: ProjectDetailProps) {
             ) : null}
           </div>
         ) : null}
+
+        <ProjectNav projects={projects} currentSlug={project.slug} />
       </div>
     </div>
   );

@@ -1,18 +1,19 @@
 export const site = {
-  name: "Your Name",
+  name: "Weston Watson",
   about: {
     heading: "About",
     paragraphs: [
-      "Your Name is a student in CodeMoldova learning to design and ship web projects with modern tools and AI.",
-      "Replace this paragraph with a short bio — what you are learning, what you like to build, and what you want to do next.",
+      "Weston Watson is a recent graduate of BYU’s Information Systems program and a Customer Operations & Product Specialist at Halda.AI, where he implements the platform for partner universities, customizes launches, and collaborates across teams to optimize workflows and improve user experience.",
+      "Previously he was a graphic designer at BYU, maintaining program identity through brand guidelines, typography, and logos while supervising assistant designers and introducing Kanban-style project tracking. He also builds and maintains westonwatson.com — a portfolio gallery for designs, photos, and creative work.",
     ],
-    image: "/placeholder.svg",
+    image: "/about/weston.png",
     contact: {
-      address: ["Your street", "City, Country"],
-      email: "you@example.com",
-      phone: "+373 XX XXX XXX",
-      github: "https://github.com/yourusername",
-      instagram: "https://www.instagram.com/yourusername",
+      address: ["Provo, Utah", "United States"],
+      email: "",
+      phone: "",
+      github: "https://github.com/westonrwatson",
+      linkedin: "https://www.linkedin.com/in/westonrwatson/",
+      instagram: "",
     },
   },
 };
