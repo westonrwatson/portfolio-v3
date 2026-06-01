@@ -40,6 +40,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
         src={project.thumbnail}
         alt=""
         fill
+        unoptimized={project.thumbnail.endsWith(".svg")}
         className="object-cover transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transition-none"
         sizes="(max-width: 640px) 100vw, 50vw"
       />

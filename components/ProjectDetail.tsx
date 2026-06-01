@@ -39,6 +39,7 @@ export function ProjectDetail({ project, projects }: ProjectDetailProps) {
             src={project.thumbnail}
             alt=""
             fill
+            unoptimized={project.thumbnail.endsWith(".svg")}
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 75rem"
             priority
