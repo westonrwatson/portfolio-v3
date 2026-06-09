@@ -109,6 +109,18 @@ export const projects: Project[] = [
     thumbnail: "/placeholder.svg",
     bgColor: "#f8f7f5",
   },
+  {
+    slug: "frizeria-volintiri",
+    title: "Frizeria din Volintiri",
+    description: [
+      "Frizeria din Volintiri is a bilingual salon site for Aliona Boldișor in Volintiri, Moldova — hair, nails, and waxing with transparent MDL pricing, gallery, FAQ, and phone-only booking.",
+      "Built as a calm, appointment-first presence: services, about, and contact in English (and additional locales) so clients know what to expect before they call to schedule.",
+    ],
+    liveUrl: "https://frizeria-din-volintiri.vercel.app/en",
+    repoUrl: "",
+    thumbnail: "/placeholder.svg",
+    bgColor: "#f6f2ee",
+  },
 ];
 
 export function isProjectReady(project: Project): boolean {
