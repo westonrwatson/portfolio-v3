@@ -85,6 +85,30 @@ export const projects: Project[] = [
     thumbnail: "/placeholder.svg",
     bgColor: "#ebe8e4",
   },
+  {
+    slug: "build-with-ai",
+    title: "Build With AI",
+    description: [
+      "Build With AI is a workshop hub for going from zero to two live websites in one session — setup guides, Lab 01 (Wordle), Lab 02 (About Me), and resources for Claude, Cursor, GitHub, and Vercel.",
+      "Co-instructed with Meg Bagley, the site walks participants through prompting, building, and deploying real projects with a clear agenda from install to showcase.",
+    ],
+    liveUrl: "https://mdbuildwithai.vercel.app/",
+    repoUrl: "",
+    thumbnail: "/placeholder.svg",
+    bgColor: "#f5f3ef",
+  },
+  {
+    slug: "calea-courses",
+    title: "Calea Courses",
+    description: [
+      "Calea Courses is a learning platform for building interactive courses, running classes with invite codes, and tracking student progress — designed to stay out of the way for teachers and students.",
+      "Teachers create chapters and questions in a clean editor, invite rosters with codes, and monitor who needs help; students join a class and practice at their own pace with focused feedback.",
+    ],
+    liveUrl: "https://caleacourses.vercel.app/",
+    repoUrl: "",
+    thumbnail: "/placeholder.svg",
+    bgColor: "#f8f7f5",
+  },
 ];
 
 export function isProjectReady(project: Project): boolean {

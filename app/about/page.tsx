@@ -40,7 +40,7 @@ export default function AboutPage() {
     <SiteContainer className="pb-8 text-sm md:pb-10 md:text-base">
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 md:gap-8">
         <div
-          className={`relative aspect-[3/4] w-full overflow-hidden bg-stone-200 ${previewOutlineClass}`}
+          className={`relative mx-auto aspect-[3/4] w-full max-w-[240px] overflow-hidden bg-stone-200 sm:max-w-[280px] ${previewOutlineClass}`}
         >
           <Image
             src={about.image}
