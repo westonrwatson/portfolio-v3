@@ -121,6 +121,18 @@ export const projects: Project[] = [
     thumbnail: "/placeholder.svg",
     bgColor: "#f6f2ee",
   },
+  {
+    slug: "la-caii-lui-costin",
+    title: "La caii lui Costin",
+    description: [
+      "La caii lui Costin is a bilingual farm experience site in Volintiri, Moldova — horseback riding, traditional carriage rides to nearby lakes, and visits to the family homestead with horses, pigs, and sheep.",
+      "Built as a calm, appointment-first presence: packages, route map, gallery, and contact in Romanian (with EN/RU) so families and tourists can book a visit with Costin Ion before they arrive.",
+    ],
+    liveUrl: "https://la-caii-lui-costin.vercel.app/",
+    repoUrl: "",
+    thumbnail: "/placeholder.svg",
+    bgColor: "#ede8df",
+  },
 ];
 
 export function isProjectReady(project: Project): boolean {
