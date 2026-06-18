@@ -139,4 +139,4 @@ export function isProjectReady(project: Project): boolean {
   return Boolean(project.liveUrl && project.liveUrl !== "#");
 }
 
-export const previewOutlineClass = "border border-stone-200";
+export const previewOutlineClass = "border border-border";

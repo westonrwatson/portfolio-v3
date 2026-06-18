@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,9 +13,11 @@ const config: Config = {
         sans: ["Arial", "Helvetica", "sans-serif"],
       },
       colors: {
-        page: "#ffffff",
-        ink: "#1a1a1a",
-        muted: "#6b6b6b",
+        page: "var(--color-page)",
+        ink: "var(--color-ink)",
+        muted: "var(--color-muted)",
+        border: "var(--color-border)",
+        surface: "var(--color-surface)",
       },
     },
   },

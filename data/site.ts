@@ -13,7 +13,7 @@ export const site = {
       phone: "",
       github: "https://github.com/westonrwatson",
       linkedin: "https://www.linkedin.com/in/westonrwatson/",
-      instagram: "",
+      instagram: "https://instagram.com/weston.watson",
     },
   },
 };

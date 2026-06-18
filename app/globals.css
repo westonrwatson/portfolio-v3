@@ -6,6 +6,24 @@
   :root {
     --site-max: 75rem;
     --site-gutter: clamp(1.25rem, 5vw, 3.5rem);
+    --color-page: #ffffff;
+    --color-ink: #1a1a1a;
+    --color-muted: #6b6b6b;
+    --color-border: #e7e5e4;
+    --color-surface: #e7e5e4;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --color-page: #141414;
+    --color-ink: #f5f5f5;
+    --color-muted: #a3a3a3;
+    --color-border: #3f3f3f;
+    --color-surface: #262626;
+  }
+
+  html {
+    @apply bg-page;
   }
 
   body {
@@ -14,6 +32,25 @@
 }
 
 @layer components {
+  .theme-reveal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: clip-path 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  html.theme-wave-active .site-shell {
+    position: relative;
+    z-index: 10;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .theme-reveal-overlay {
+      transition: none;
+    }
+  }
+
   .site-shell {
     width: 100%;
     padding-left: var(--site-gutter);

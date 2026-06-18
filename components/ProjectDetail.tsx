@@ -20,7 +20,7 @@ export function ProjectDetail({ project, projects }: ProjectDetailProps) {
           href={project.liveUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className={`relative block aspect-video w-full overflow-hidden bg-stone-200 transition-opacity hover:opacity-95 ${previewOutlineClass}`}
+          className={`relative block aspect-video w-full overflow-hidden bg-surface transition-opacity hover:opacity-95 ${previewOutlineClass}`}
           style={{ backgroundColor: project.bgColor }}
           aria-label={`Open ${project.title} live site`}
         >
@@ -28,7 +28,7 @@ export function ProjectDetail({ project, projects }: ProjectDetailProps) {
         </a>
       ) : (
         <div
-          className={`relative aspect-video w-full overflow-hidden bg-stone-200 ${previewOutlineClass}`}
+          className={`relative aspect-video w-full overflow-hidden bg-surface ${previewOutlineClass}`}
           style={{ backgroundColor: project.bgColor }}
         >
           <ProjectLivePreview project={project} priority />
@@ -60,7 +60,7 @@ export function ProjectDetail({ project, projects }: ProjectDetailProps) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block border border-stone-300 bg-ink px-5 py-2.5 text-base font-medium text-white transition-colors hover:bg-stone-800"
+                className="inline-block border border-border bg-ink px-5 py-2.5 text-base font-medium text-page transition-colors hover:opacity-90"
               >
                 Open live site
               </a>
@@ -70,7 +70,7 @@ export function ProjectDetail({ project, projects }: ProjectDetailProps) {
                 href={project.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block border border-stone-300 px-5 py-2.5 text-base font-medium text-ink transition-colors hover:bg-stone-100"
+                className="inline-block border border-border px-5 py-2.5 text-base font-medium text-ink transition-colors hover:bg-surface"
               >
                 View on GitHub
               </a>
