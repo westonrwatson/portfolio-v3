@@ -37,29 +37,29 @@ export default function AboutPage() {
   const { contact } = about;
 
   return (
-    <SiteContainer className="pb-8 text-sm md:pb-10 md:text-base">
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 md:gap-8">
+    <SiteContainer className="pb-8 text-sm md:pb-10 md:text-base lg:flex lg:min-h-0 lg:flex-1 lg:flex-col lg:overflow-hidden lg:pb-6">
+      <div className="grid min-h-0 flex-1 grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2 lg:items-stretch lg:gap-8">
         <div
-          className={`relative aspect-[3/4] w-full overflow-hidden bg-stone-200 ${previewOutlineClass}`}
+          className={`relative aspect-[3/4] min-h-0 w-full overflow-hidden bg-stone-200 lg:aspect-auto lg:h-full ${previewOutlineClass}`}
         >
           <Image
             src={about.image}
             alt={name}
             fill
             className="object-cover object-center"
-            sizes="(max-width: 1024px) 100vw, 400px"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             priority
           />
         </div>
 
-        <div className="space-y-4 text-ink">
+        <div className="self-start space-y-3 text-ink lg:space-y-3">
           {about.paragraphs.map((paragraph, index) => (
-            <p key={index} className="leading-relaxed">
+            <p key={index} className="leading-relaxed lg:leading-snug">
               {paragraph}
             </p>
           ))}
 
-          <div className="space-y-3 pt-2">
+          <div className="space-y-2 pt-1 lg:space-y-2">
             {contact.address.length > 0 ? (
               <div>
                 <p className="mb-1 text-xs font-bold uppercase tracking-wide">
