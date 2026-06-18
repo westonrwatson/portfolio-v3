@@ -23,7 +23,7 @@ export function Header() {
         <div className="flex items-center gap-1.5 md:gap-2">
           <Link
             href="/"
-            className="text-2xl font-bold uppercase tracking-wider text-ink md:text-3xl"
+            className="text-xl font-bold uppercase tracking-wider text-ink md:text-3xl"
           >
             {site.name}
           </Link>
