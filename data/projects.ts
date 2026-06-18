@@ -122,6 +122,18 @@ export const projects: Project[] = [
     bgColor: "#f6f2ee",
   },
   {
+    slug: "about-me-example",
+    title: "About Me",
+    description: [
+      "A personal about site with a hero intro, story, skills, values, and contact — built as a clean single-page portfolio for Weston Watson.",
+      "Highlights travel, design, and coding with stats, project cards, and a minimalist layout deployed on Vercel at about-me-example.vercel.app.",
+    ],
+    liveUrl: "https://about-me-example.vercel.app/",
+    repoUrl: "",
+    thumbnail: "/placeholder.svg",
+    bgColor: "#f5f3f0",
+  },
+  {
     slug: "la-caii-lui-costin",
     title: "La caii lui Costin",
     description: [
