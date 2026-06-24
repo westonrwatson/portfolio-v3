@@ -145,6 +145,30 @@ export const projects: Project[] = [
     thumbnail: "/placeholder.svg",
     bgColor: "#ede8df",
   },
+  {
+    slug: "la-strutii-din-jos",
+    title: "La Struții din Jos",
+    description: [
+      "La Struții din Jos is a bilingual rural experience site in Volintiri, Moldova — a family homestead at the edge of the village where visitors can see ostriches up close, take photos, and learn about the birds on a guided visit.",
+      "Built as a calm, appointment-first presence: visit flow, nearby attractions, rules, and contact in Romanian (with EN/RU) so families can call Ludmila Ciur and schedule a 30–45 minute visit before they arrive.",
+    ],
+    liveUrl: "https://la-strutii-din-jos.vercel.app/#en",
+    repoUrl: "",
+    thumbnail: "/placeholder.svg",
+    bgColor: "#e6ebe2",
+  },
+  {
+    slug: "quoteme",
+    title: "QuoteMe",
+    description: [
+      "QuoteMe is the marketing site for a home-screen quotes app — built around the idea that inspiration shouldn’t live in forgotten notes, but where you’ll actually see it every day.",
+      "The landing page highlights privacy-first design (no ads, no tracking, quotes stay on device), testimonials, feedback, and download links in a clean, distraction-free layout.",
+    ],
+    liveUrl: "https://quotemeapp.com/",
+    repoUrl: "",
+    thumbnail: "/placeholder.svg",
+    bgColor: "#eef0f4",
+  },
 ];
 
 export function isProjectReady(project: Project): boolean {
