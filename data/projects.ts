@@ -134,6 +134,18 @@ export const projects: Project[] = [
     bgColor: "#f6f2ee",
   },
   {
+    slug: "afanasyeva-beauty-salon",
+    title: "Afanasyeva Beauty Salon",
+    description: [
+      "Afanasyeva Beauty Salon is a bilingual salon site in Chișinău, Moldova — a family studio founded in 2017 by Tatiana Afanasyeva, offering hair, nails, brows, makeup, and massage with transparent MDL pricing.",
+      "Built as a calm, appointment-first presence: services, team, gallery, reviews, and FAQ in Russian (with EN/RO) so guests can call or message to book before they visit.",
+    ],
+    liveUrl: "https://afanasyevabeautysalon.vercel.app/",
+    repoUrl: "",
+    thumbnail: "/placeholder.svg",
+    bgColor: "#f5f0eb",
+  },
+  {
     slug: "la-caii-lui-costin",
     title: "La caii lui Costin",
     description: [
