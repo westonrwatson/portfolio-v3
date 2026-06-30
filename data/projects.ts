@@ -56,7 +56,7 @@ export const projects: Project[] = [
       "CodeMoldova is the program site for CodeMoldova 2026 — the hub for the cohort, schedule, and resources behind the summer coding initiative in Moldova.",
       "Built and deployed on Vercel as a central place for participants and partners to find program information and stay connected throughout the season.",
     ],
-    liveUrl: "https://codemoldova.vercel.app/",
+    liveUrl: "https://codemoldova-archive.vercel.app/",
     repoUrl: "",
     thumbnail: "/placeholder.svg",
     bgColor: "#d8deea",
